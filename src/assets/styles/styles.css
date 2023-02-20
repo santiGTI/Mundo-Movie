@@ -25,3 +25,8 @@
     color: rgb(63, 45, 45);
     text-align: center;
 }
+
+.navbar-nav{
+    width: 400px;
+    justify-content: space-between;
+}

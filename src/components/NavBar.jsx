@@ -20,12 +20,18 @@ const NavBar = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Nav className="me-5 my-2 my-lg-0" navbarScroll>
+          <Nav className="me-2 my-2 my-lg-0" navbarScroll>
             <Nav.Link href="#action1">Inicio</Nav.Link>
             <Nav.Link href="#action2">Nuevo</Nav.Link>
             <Nav.Link href="#action3">Polular</Nav.Link>
             <Nav.Link href="#action4">Deportes</Nav.Link>
-            <Nav.Link href="#action4">Series</Nav.Link>
+            <NavDropdown title="Series" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Recientes</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Polulares</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">
+                Mejor puntuadas
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
           <Form className="d-flex form-busqueda ms-4">
             <Form.Control
@@ -37,7 +43,6 @@ const NavBar = () => {
             <Button className="btn-buscar" variant="dark">
               Buscar
             </Button>
-            {/* Cart Widget */}
             <CartWidget />
           </Form>
         </Navbar.Collapse>
